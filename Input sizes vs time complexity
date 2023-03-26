@@ -1,0 +1,26 @@
+The constraints of a problem can be considered as hints because they indicate an upper bound on what your solution's time complexity should be.
+Being able to figure out the expected time complexity of a solution given the input size is a valuable skill to have.
+In all LeetCode problems and most online assessments (OA), you will be given the problem's constraints. 
+Unfortunately, you will usually not be explicitly told the constraints of a problem in an interview, but it's still good for practicing on LeetCode and completing OAs.
+Still, in an interview, it usually doesn't hurt to ask about the expected input sizes.
+
+n<=10
+
+The expected time complexity likely has a factorial or an exponential with a base larger than 2 - O(n^2.n!) or
+O(4^n) for example.
+
+You should think about backtracking or any brute-force-esque recursive algorithm. n <= 10 is extremely small
+and usually any algorithm that correctly finds the answer will be fast enough.
+
+
+10 < n <= 20
+
+The expected time complexity likely involves O(2^n). Any higher base or a factorial will be too slow (3^20 = ~3.5
+billion, and 20! is much larger). A 2^n usually implies that given a collection of elements, you are considering all
+
+subsets/subsequences - for each element, there are two choices: take it or don't take it.
+
+Again, this bound is very small, so most algorithms that are correct will probably be fast enough. Consider
+backtracking and recursion.
+
+20 < n <= 100
